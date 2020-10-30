@@ -1,0 +1,58 @@
+[
+  {
+    "type": "standard",
+    "instanceType": "n2-highmem-4",
+    "description": "4 vCPU / 32 GB RAM / 750 GB disk",
+    "vCpu": 4,
+    "memoryInGb": 32,
+    "diskInGb": 750,
+    "defaultMaxSize": 690,
+    "preferredDefault": true,
+    "default": true,
+    "mICU": 4000,
+    "workerCapacity": 2,
+    "numLocalSSD": 2
+  },
+  {
+    "type": "standard",
+    "instanceType": "n2-highmem-8",
+    "description": "8 vCPU / 64 GB RAM / 1500 GB disk",
+    "vCpu": 8,
+    "memoryInGb": 64,
+    "diskInGb": 1500,
+    "defaultMaxSize": 1390,
+    "preferredDefault": false,
+    "default": false,
+    "mICU": 8000,
+    "workerCapacity": 3,
+    "numLocalSSD": 4
+  },
+  {
+    "type": "standard",
+    "instanceType": "n2-highmem-16",
+    "description": "16 vCPU / 128 GB RAM / 3000 GB disk",
+    "vCpu": 16,
+    "memoryInGb": 128,
+    "diskInGb": 3000,
+    "defaultMaxSize": 2785,
+    "preferredDefault": false,
+    "default": false,
+    "mICU": 16000,
+    "workerCapacity": 6,
+    "numLocalSSD": 8
+  },
+  {
+    "type": "standard",
+    "instanceType": "n1-highmem-32",
+    "description": "32 vCPU / 208 GB RAM / 6000 GB disk",
+    "vCpu": 32,
+    "memoryInGb": 208,
+    "diskInGb": 6000,
+    "defaultMaxSize": 5590,
+    "preferredDefault": false,
+    "default": false,
+    "mICU": 32000,
+    "workerCapacity": 12,
+    "numLocalSSD": 16
+  }
+]

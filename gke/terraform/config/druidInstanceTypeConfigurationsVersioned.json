@@ -1,0 +1,378 @@
+[
+  {
+    "minImplyVersion": "3.1.0",
+    "configSet": [
+      {
+        "serviceType": "indexer",
+        "instanceType": "n2-highmem-4",
+        "properties": {
+          "druid.processing.buffer.sizeBytes": 300000000,
+          "druid.processing.numMergeBuffers": 2,
+          "druid.processing.numThreads": 3,
+          "druid.server.http.numThreads": 50,
+          "druid.worker.capacity": 2
+        },
+        "jvmConfig": [
+          "-Xms3g",
+          "-Xmx3g",
+          "-XX:MaxDirectMemorySize=4g"
+        ]
+      },
+      {
+        "serviceType": "indexer",
+        "instanceType": "n2-highmem-8",
+        "properties": {
+          "druid.processing.buffer.sizeBytes": 300000000,
+          "druid.processing.numMergeBuffers": 3,
+          "druid.processing.numThreads": 10,
+          "druid.server.http.numThreads": 60,
+          "druid.worker.capacity": 3
+        },
+        "jvmConfig": [
+          "-Xms9g",
+          "-Xmx9g",
+          "-XX:MaxDirectMemorySize=20g"
+        ]
+      },
+      {
+        "serviceType": "indexer",
+        "instanceType": "n2-highmem-16",
+        "properties": {
+          "druid.processing.buffer.sizeBytes": 300000000,
+          "druid.processing.numMergeBuffers": 5,
+          "druid.processing.numThreads": 20,
+          "druid.server.http.numThreads": 150,
+          "druid.worker.capacity": 6
+        },
+        "jvmConfig": [
+          "-Xms18g",
+          "-Xmx18g",
+          "-XX:MaxDirectMemorySize=30g"
+        ]
+      },
+      {
+        "serviceType": "indexer",
+        "instanceType": "n1-highmem-32",
+        "properties": {
+          "druid.processing.buffer.sizeBytes": 300000000,
+          "druid.processing.numMergeBuffers": 10,
+          "druid.processing.numThreads": 40,
+          "druid.server.http.numThreads": 300,
+          "druid.worker.capacity": 12
+        },
+        "jvmConfig": [
+          "-Xms36g",
+          "-Xmx36g",
+          "-XX:MaxDirectMemorySize=50g"
+        ]
+      }
+    ]
+  },
+  {
+    "minImplyVersion": "0",
+    "configSet": [
+      {
+        "serviceType": "broker",
+        "instanceType": "c2-standard-4",
+        "properties": {
+          "druid.processing.numMergeBuffers": 4,
+          "druid.processing.numThreads": 1,
+          "druid.broker.http.numConnections": 25,
+          "druid.processing.buffer.sizeBytes": 500000000,
+          "druid.server.http.numThreads": 30
+        },
+        "jvmConfig": [
+          "-Xms8g",
+          "-Xmx8g",
+          "-XX:MaxDirectMemorySize=4g"
+        ]
+      },
+      {
+        "serviceType": "broker",
+        "instanceType": "c2-standard-8",
+        "properties": {
+          "druid.processing.numMergeBuffers": 12,
+          "druid.processing.numThreads": 1,
+          "druid.broker.http.numConnections": 25,
+          "druid.processing.buffer.sizeBytes": 500000000,
+          "druid.server.http.numThreads": 40
+        },
+        "jvmConfig": [
+          "-Xms16g",
+          "-Xmx16g",
+          "-XX:MaxDirectMemorySize=9g"
+        ]
+      },
+      {
+        "serviceType": "broker",
+        "instanceType": "c2-standard-16",
+        "properties": {
+          "druid.processing.numMergeBuffers": 24,
+          "druid.processing.numThreads": 1,
+          "druid.broker.http.numConnections": 25,
+          "druid.processing.buffer.sizeBytes": 500000000,
+          "druid.server.http.numThreads": 60
+        },
+        "jvmConfig": [
+          "-Xms32g",
+          "-Xmx32g",
+          "-XX:MaxDirectMemorySize=18g"
+        ]
+      },
+      {
+        "serviceType": "broker",
+        "instanceType": "c2-standard-30",
+        "properties": {
+          "druid.processing.numMergeBuffers": 45,
+          "druid.processing.numThreads": 1,
+          "druid.broker.http.numConnections": 25,
+          "druid.processing.buffer.sizeBytes": 500000000,
+          "druid.server.http.numThreads": 120
+        },
+        "jvmConfig": [
+          "-Xms64g",
+          "-Xmx64g",
+          "-XX:MaxDirectMemorySize=42g"
+        ]
+      },
+      {
+        "serviceType": "router",
+        "instanceType": "c2-standard-4",
+        "properties": {
+          "druid.router.http.numConnections": 20,
+          "druid.router.http.numMaxThreads": 20,
+          "druid.server.http.numThreads": 50
+        },
+        "jvmConfig": [
+          "-Xms1g",
+          "-Xmx1g"
+        ]
+      },
+      {
+        "serviceType": "router",
+        "instanceType": "c2-standard-8",
+        "properties": {
+          "druid.router.http.numConnections": 30,
+          "druid.router.http.numMaxThreads": 30,
+          "druid.server.http.numThreads": 70
+        },
+        "jvmConfig": [
+          "-Xms2g",
+          "-Xmx2g"
+        ]
+      },
+      {
+        "serviceType": "router",
+        "instanceType": "c2-standard-16",
+        "properties": {
+          "druid.router.http.numConnections": 50,
+          "druid.router.http.numMaxThreads": 50,
+          "druid.server.http.numThreads": 110
+        },
+        "jvmConfig": [
+          "-Xms3g",
+          "-Xmx3g"
+        ]
+      },
+      {
+        "serviceType": "router",
+        "instanceType": "c2-standard-30",
+        "properties": {
+          "druid.router.http.numConnections": 100,
+          "druid.router.http.numMaxThreads": 100,
+          "druid.server.http.numThreads": 110
+        },
+        "jvmConfig": [
+          "-Xms4g",
+          "-Xmx4g"
+        ]
+      },
+
+      {
+        "serviceType": "historical",
+        "instanceType": "n2-highmem-4",
+        "properties": {
+          "druid.server.maxSize": 690000000000,
+          "druid.server.http.numThreads": 50,
+          "druid.segmentCache.locations": "[{\"path\":\"/mnt/var/druid/segment-cache\",\"maxSize\":\"335000000000\"},{\"path\":\"/mnt/var1/druid/segment-cache\",\"maxSize\":\"355000000000\"}]",
+          "druid.processing.buffer.sizeBytes": 500000000,
+          "druid.processing.numMergeBuffers": 2,
+          "druid.processing.numThreads": 3,
+          "druid.cache.sizeInBytes": 500000000
+        },
+        "jvmConfig": [
+          "-Xms3g",
+          "-Xmx3g",
+          "-XX:MaxDirectMemorySize=4g"
+        ]
+      },
+      {
+        "serviceType": "historical",
+        "instanceType": "n2-highmem-8",
+        "properties": {
+          "druid.server.maxSize": 1390000000000,
+          "druid.server.http.numThreads": 50,
+          "druid.segmentCache.locations": "[{\"path\":\"/mnt/var/druid/segment-cache\",\"maxSize\":\"325000000000\"},{\"path\":\"/mnt/var1/druid/segment-cache\",\"maxSize\":\"355000000000\"},{\"path\":\"/mnt/var2/druid/segment-cache\",\"maxSize\":\"355000000000\"},{\"path\":\"/mnt/var3/druid/segment-cache\",\"maxSize\":\"355000000000\"}]",
+          "druid.processing.buffer.sizeBytes": 500000000,
+          "druid.processing.numMergeBuffers": 2,
+          "druid.processing.numThreads": 7,
+          "druid.cache.sizeInBytes": 500000000
+        },
+        "jvmConfig": [
+          "-Xms6g",
+          "-Xmx6g",
+          "-XX:MaxDirectMemorySize=6g"
+        ]
+      },
+      {
+        "serviceType": "historical",
+        "instanceType": "n2-highmem-16",
+        "properties": {
+          "druid.server.maxSize": 2785000000000,
+          "druid.server.http.numThreads": 60,
+          "druid.segmentCache.locations": "[{\"path\":\"/mnt/var/druid/segment-cache\",\"maxSize\":\"300000000000\"},{\"path\":\"/mnt/var1/druid/segment-cache\",\"maxSize\":\"355000000000\"},{\"path\":\"/mnt/var2/druid/segment-cache\",\"maxSize\":\"355000000000\"},{\"path\":\"/mnt/var3/druid/segment-cache\",\"maxSize\":\"355000000000\"},{\"path\":\"/mnt/var4/druid/segment-cache\",\"maxSize\":\"355000000000\"},{\"path\":\"/mnt/var5/druid/segment-cache\",\"maxSize\":\"355000000000\"},{\"path\":\"/mnt/var6/druid/segment-cache\",\"maxSize\":\"355000000000\"},{\"path\":\"/mnt/var7/druid/segment-cache\",\"maxSize\":\"355000000000\"}]",
+          "druid.processing.buffer.sizeBytes": 500000000,
+          "druid.processing.numMergeBuffers": 4,
+          "druid.processing.numThreads": 15,
+          "druid.cache.sizeInBytes": 1000000000
+        },
+        "jvmConfig": [
+          "-Xms12g",
+          "-Xmx12g",
+          "-XX:MaxDirectMemorySize=12g"
+        ]
+      },
+      {
+        "serviceType": "historical",
+        "instanceType": "n1-highmem-32",
+        "properties": {
+          "druid.server.maxSize": 5590000000000,
+          "druid.server.http.numThreads": 100,
+          "druid.segmentCache.locations": "[{\"path\":\"/mnt/var/druid/segment-cache\",\"maxSize\":\"265000000000\"},{\"path\":\"/mnt/var1/druid/segment-cache\",\"maxSize\":\"355000000000\"},{\"path\":\"/mnt/var2/druid/segment-cache\",\"maxSize\":\"355000000000\"},{\"path\":\"/mnt/var3/druid/segment-cache\",\"maxSize\":\"355000000000\"},{\"path\":\"/mnt/var4/druid/segment-cache\",\"maxSize\":\"355000000000\"},{\"path\":\"/mnt/var5/druid/segment-cache\",\"maxSize\":\"355000000000\"},{\"path\":\"/mnt/var6/druid/segment-cache\",\"maxSize\":\"355000000000\"},{\"path\":\"/mnt/var7/druid/segment-cache\",\"maxSize\":\"355000000000\"},{\"path\":\"/mnt/var8/druid/segment-cache\",\"maxSize\":\"355000000000\"},{\"path\":\"/mnt/var9/druid/segment-cache\",\"maxSize\":\"355000000000\"},{\"path\":\"/mnt/var10/druid/segment-cache\",\"maxSize\":\"355000000000\"},{\"path\":\"/mnt/var11/druid/segment-cache\",\"maxSize\":\"355000000000\"},{\"path\":\"/mnt/var12/druid/segment-cache\",\"maxSize\":\"355000000000\"},{\"path\":\"/mnt/var13/druid/segment-cache\",\"maxSize\":\"355000000000\"},{\"path\":\"/mnt/var14/druid/segment-cache\",\"maxSize\":\"355000000000\"},{\"path\":\"/mnt/var15/druid/segment-cache\",\"maxSize\":\"355000000000\"}]",
+          "druid.processing.buffer.sizeBytes": 500000000,
+          "druid.processing.numMergeBuffers": 8,
+          "druid.processing.numThreads": 31,
+          "druid.cache.sizeInBytes": 2000000000
+        },
+        "jvmConfig": [
+          "-Xms24g",
+          "-Xmx24g",
+          "-XX:MaxDirectMemorySize=24g"
+        ]
+      },
+      {
+        "serviceType": "middleManager",
+        "instanceType": "n2-highmem-4",
+        "properties": {
+          "druid.indexer.runner.javaOpts": "-server -Xmx3g -XX:+IgnoreUnrecognizedVMOptions -XX:MaxDirectMemorySize=10g -Duser.timezone=UTC -XX:+PrintGC -XX:+PrintGCDateStamps -XX:+ExitOnOutOfMemoryError -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/mnt/tmp/druid-peon.hprof -Dfile.encoding=UTF-8 -Djava.util.logging.manager=org.apache.logging.log4j.jul.LogManager -Daws.region=us-east-1",
+          "druid.indexer.fork.property.druid.processing.buffer.sizeBytes": 300000000,
+          "druid.indexer.fork.property.druid.processing.numMergeBuffers": 2,
+          "druid.indexer.fork.property.druid.processing.numThreads": 2,
+          "druid.indexer.fork.property.druid.server.http.numThreads": 50,
+          "druid.worker.capacity": 2
+        },
+        "jvmConfig": [
+          "-Xms128m",
+          "-Xmx128m"
+        ]
+      },
+      {
+        "serviceType": "middleManager",
+        "instanceType": "n2-highmem-8",
+        "properties": {
+          "druid.indexer.runner.javaOpts": "-server -Xmx3g -XX:+IgnoreUnrecognizedVMOptions -XX:MaxDirectMemorySize=10g -Duser.timezone=UTC -XX:+PrintGC -XX:+PrintGCDateStamps -XX:+ExitOnOutOfMemoryError -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/mnt/tmp/druid-peon.hprof -Dfile.encoding=UTF-8 -Djava.util.logging.manager=org.apache.logging.log4j.jul.LogManager -Daws.region=us-east-1",
+          "druid.indexer.fork.property.druid.processing.buffer.sizeBytes": 300000000,
+          "druid.indexer.fork.property.druid.processing.numMergeBuffers": 2,
+          "druid.indexer.fork.property.druid.processing.numThreads": 2,
+          "druid.indexer.fork.property.druid.server.http.numThreads": 50,
+          "druid.worker.capacity": 3
+        },
+        "jvmConfig": [
+          "-Xms128m",
+          "-Xmx128m"
+        ]
+      },
+      {
+        "serviceType": "middleManager",
+        "instanceType": "n2-highmem-16",
+        "properties": {
+          "druid.indexer.runner.javaOpts": "-server -Xmx3g -XX:+IgnoreUnrecognizedVMOptions -XX:MaxDirectMemorySize=10g -Duser.timezone=UTC -XX:+PrintGC -XX:+PrintGCDateStamps -XX:+ExitOnOutOfMemoryError -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/mnt/tmp/druid-peon.hprof -Dfile.encoding=UTF-8 -Djava.util.logging.manager=org.apache.logging.log4j.jul.LogManager -Daws.region=us-east-1",
+          "druid.indexer.fork.property.druid.processing.buffer.sizeBytes": 300000000,
+          "druid.indexer.fork.property.druid.processing.numMergeBuffers": 2,
+          "druid.indexer.fork.property.druid.processing.numThreads": 2,
+          "druid.indexer.fork.property.druid.server.http.numThreads": 50,
+          "druid.worker.capacity": 6
+        },
+        "jvmConfig": [
+          "-Xms256m",
+          "-Xmx256m"
+        ]
+      },
+      {
+        "serviceType": "middleManager",
+        "instanceType": "n1-highmem-32",
+        "properties": {
+          "druid.indexer.runner.javaOpts": "-server -Xmx3g -XX:+IgnoreUnrecognizedVMOptions -XX:MaxDirectMemorySize=10g -Duser.timezone=UTC -XX:+PrintGC -XX:+PrintGCDateStamps -XX:+ExitOnOutOfMemoryError -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/mnt/tmp/druid-peon.hprof -Dfile.encoding=UTF-8 -Djava.util.logging.manager=org.apache.logging.log4j.jul.LogManager -Daws.region=us-east-1",
+          "druid.indexer.fork.property.druid.processing.buffer.sizeBytes": 300000000,
+          "druid.indexer.fork.property.druid.processing.numMergeBuffers": 2,
+          "druid.indexer.fork.property.druid.processing.numThreads": 2,
+          "druid.indexer.fork.property.druid.server.http.numThreads": 50,
+          "druid.worker.capacity": 12
+        },
+        "jvmConfig": [
+          "-Xms256m",
+          "-Xmx256m"
+        ]
+      },
+
+      {
+        "serviceType": "coordinator",
+        "instanceType": "n2-standard-2",
+        "jvmConfig": [
+          "-Xms3700m",
+          "-Xmx3700m"
+        ]
+      },
+      {
+        "serviceType": "coordinator",
+        "instanceType": "n2-standard-8",
+        "jvmConfig": [
+          "-Xms18g",
+          "-Xmx18g"
+        ]
+      },
+      {
+        "serviceType": "coordinator",
+        "instanceType": "n2-standard-16",
+        "jvmConfig": [
+          "-Xms35g",
+          "-Xmx35g"
+        ]
+      },
+      {
+        "serviceType": "overlord",
+        "instanceType": "n2-standard-2",
+        "jvmConfig": [
+          "-Xms1800m",
+          "-Xmx1800m"
+        ]
+      },
+      {
+        "serviceType": "overlord",
+        "instanceType": "n2-standard-8",
+        "jvmConfig": [
+          "-Xms10g",
+          "-Xmx10g"
+        ]
+      },
+      {
+        "serviceType": "overlord",
+        "instanceType": "n2-standard-16",
+        "jvmConfig": [
+          "-Xms15g",
+          "-Xmx15g"
+        ]
+      }
+    ]
+  }
+]

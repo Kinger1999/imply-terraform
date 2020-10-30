@@ -1,0 +1,35 @@
+[
+  {
+    "type": "standard",
+    "instanceType": "n2-standard-2",
+    "description": "2 vCPU / 8 GB RAM",
+    "vCpu": 2,
+    "memoryInGb": 8,
+    "diskInGb": 20,
+    "preferredDefault": true,
+    "default": true,
+    "mICU": 2000
+  },
+  {
+    "type": "standard",
+    "instanceType": "n2-standard-8",
+    "description": "8 vCPU / 32 GB RAM",
+    "vCpu": 8,
+    "memoryInGb": 32,
+    "diskInGb": 20,
+    "preferredDefault": false,
+    "default": false,
+    "mICU": 5000
+  },
+  {
+    "type": "standard",
+    "instanceType": "n2-standard-16",
+    "description": "16 vCPU / 64 GB RAM",
+    "vCpu": 16,
+    "memoryInGb": 64,
+    "diskInGb": 20,
+    "preferredDefault": false,
+    "default": false,
+    "mICU": 16000
+  }
+]
